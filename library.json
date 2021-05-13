@@ -13,5 +13,8 @@
     "url": "https://github.com/me-no-dev/ESPAsyncUDP.git"
   },
   "frameworks": "arduino",
-  "platforms": ["espressif8266"]
+  "platforms": "espressif8266",
+  "build": {
+    "libCompatMode": 2
+  }
 }
