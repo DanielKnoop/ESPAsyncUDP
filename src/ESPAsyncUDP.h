@@ -58,6 +58,7 @@ public:
     size_t length();
     bool isBroadcast();
     bool isMulticast();
+    String readString();
 
     IPAddress localIP();
     uint16_t localPort();

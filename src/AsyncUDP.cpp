@@ -95,6 +95,14 @@ size_t AsyncUDPPacket::length()
     return _len;
 }
 
+String AsyncUDPPacket::readString()
+{
+    char str[this->length() + 1];
+    strncpy(str, (char*)this->data(), this->length());
+    str[this->length()] = 0;
+    return String(str);
+}
+
 IPAddress AsyncUDPPacket::localIP()
 {
     return IPAddress(_localIp->addr);
